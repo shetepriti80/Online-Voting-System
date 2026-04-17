@@ -1,5 +1,6 @@
 ## Online-Voting-System
-Objective: Create a secure database for managing elections and votes. Features: • Voter registration and verification • Voting and vote tallying • Result announcement and audit trail
+-Objective: Create a secure database for managing elections and votes. 
+-Features: • Voter registration and verification • Voting and vote tallying • Result announcement and audit trail
 
 ## Technologies Used
 - Python
