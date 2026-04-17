@@ -1,4 +1,5 @@
 ##Cell 1: Install + Connect
+
 !pip install mysql-connector-python
 
 import mysql.connector
@@ -15,6 +16,7 @@ print("Connected to MySQL")
 
 
 ##Cell 2: Register Multiple Voters
+
 n = int(input("Enter number of voters: "))
 
 voter_ids = []
@@ -38,6 +40,7 @@ print("\nAll voters registered!\n")
 
 
 ##Cell 3: Show Candidates
+
 cursor.execute("SELECT * FROM candidate_info")
 candidates = cursor.fetchall()
 
@@ -47,6 +50,7 @@ for c in candidates:
 
 
 ##Cell 4: Voting
+
 for vid in voter_ids:
     print(f"\nVoter ID {vid} voting:")
 
@@ -67,6 +71,7 @@ for vid in voter_ids:
 
   
 ##Cell 5: Show Results
+
       cursor.execute("""
 SELECT c.candidate_name, COUNT(v.vote_id)
 FROM candidate_info c
