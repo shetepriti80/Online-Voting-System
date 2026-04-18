@@ -27,3 +27,12 @@ CREATE TABLE vote_records (
 -- Insert Candidates
 INSERT INTO candidate_info(candidate_name) 
 VALUES ('Ram'), ('Sham'), ('Tukaram');
+
+SELECT * FROM voter_info;
+
+SELECT * FROM vote_records;
+
+SELECT c.candidate_name, COUNT(v.vote_id)
+FROM candidate_info c
+LEFT JOIN vote_records v ON c.candidate_id = v.candidate_id
+GROUP BY c.candidate_id;
